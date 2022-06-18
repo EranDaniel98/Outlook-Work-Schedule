@@ -1,0 +1,8 @@
+Files_location:
+    token: 'GoogleAPI/token.json'
+    cred: 'GoogleAPI/credentials.json'
+
+Service:
+    ID: 'primary'
+    name: 'calendar'
+    Version: 'v3'

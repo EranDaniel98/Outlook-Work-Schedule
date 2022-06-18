@@ -1,0 +1,11 @@
+Event:
+    - Reminder_method: "popup"
+    - Reminder: 1440
+
+Appointment_info:
+    - summary: "Work !!"
+    - location: "נמל אשדוד החדש"
+    - time_zone: ""
+
+Folder_name: "Work Schedule" # The name of the folder where all the work shcedule are
+user_name: "Eran" # Enter here your name like how it shows in the mail (With capital letters)
