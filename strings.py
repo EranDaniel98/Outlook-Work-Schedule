@@ -8,3 +8,5 @@ monitoring = 'Monitoring and MSGs'
 LSWS = 'LS + WS'
 
 folder_not_found = 'ERROR 404: Folder not found'
+
+event_description = 'Get ready to work! you are on the'

@@ -1,8 +1,6 @@
-Files_location:
-    token: 'GoogleAPI/token.json'
-    cred: 'GoogleAPI/credentials.json'
+#files_path:
+token_path: "GoogleAPI/token.json"
+cred_path: "GoogleAPI/credentials.json"
 
-Service:
-    ID: 'primary'
-    name: 'calendar'
-    Version: 'v3'
+#Calendar_api:
+SCOPES: ["https://www.googleapis.com/auth/calendar"]

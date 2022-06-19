@@ -13,22 +13,18 @@ class mail_parser:
 
     def __init__(self):
         self.working_days_info = {}
-        #self.config_file_data.__init__('user_config.yaml')
         self.config_file_data = config_handler('user_config.yaml')
+        self.mail = self.config_file_data.get_requested_param('email')
 
-    def get_folder_by_name(self):
-        folder_name = self.config_file_data.get_folder_name()
+    def get_work_sched_folder(self):
+        folder_name = self.config_file_data.get_requested_param("Folder_name")
         if folder_name == None: return None
 
-        folder_index = 1
-        while(folder_index):
-            for folder in MAPI.Folders.Item(folder_index).Folders: 
-                if folder.Name == folder_name:
-                    return folder
+        for folder in MAPI.Folders(self.mail).Folders: 
+            if folder.Name == folder_name:
+                return folder
 
-            folder_index += 1
-        
-        # Write to logs
+        # Write to logs -> FOLDER NOT EXISTS
         return None
 
     def parse_mail(self, mail):
@@ -44,7 +40,7 @@ class mail_parser:
         self.create_work_days_dict(evening_shift_MSGs, evening_shift_LSWS, week_dates, 'evening')
 
     def create_work_days_dict(self, msgs_shift, lsws_shift, week_dates, shift):
-        user_name = self.config_file_data.get_user_name()
+        user_name = self.config_file_data.get_requested_param("User_name")
 
         keys = ["Start_Date_Time", "End_Date_Time", "Role"]
         work_count = len(self.working_days_info)
