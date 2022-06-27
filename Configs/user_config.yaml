@@ -1,0 +1,14 @@
+email: "eran.daniel@hadct.co.il"
+
+# Event Info
+event:
+  summary: "Work !!" # Desciption
+  location: "נמל אשדוד החדש"
+  reminders:
+    useDefault: False # Do not change
+    overrides: 
+      - method: "popup" # for email notification change "popup" to "email"
+        minutes: 1440 # 60 x 24 (the notification will be 24 hours before the event)
+
+Folder_name: "Work Schedule" # The name of the folder where all the work shcedule are
+User_name: "Eran" # Enter here your name like how it shows in the mail (With capital letters)

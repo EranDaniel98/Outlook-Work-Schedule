@@ -1,0 +1,6 @@
+#files_path:
+token_path: "GoogleAPI/token.json"
+cred_path: "GoogleAPI/credentials.json"
+
+#Calendar_api:
+SCOPES: ["https://www.googleapis.com/auth/calendar"]
